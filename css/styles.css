@@ -78,6 +78,8 @@ li {
    padding: 100px 0;
 }
 
+btn_close_modal
+
 .navigation_item:last-child {
    margin-right: 0;
 }
@@ -161,7 +163,18 @@ li {
    text-decoration: underline;
 }
 
+
+
 .nav_list .navigation_item:first-child .link_nav {
+   position: relative;
+   color: #404bbf;
+}
+
+.list_menu {
+   list-style: none;
+}
+
+.list_menu .navigation_item:first-child .link_nav {
    position: relative;
    color: #404bbf;
 }
@@ -283,6 +296,8 @@ li {
    letter-spacing: 0.02em;
    margin-bottom: 16px;
 }
+
+
 
 .studio_white {
    color: #f4f4fd;
@@ -408,11 +423,23 @@ li {
    gap: 24px;
 }
 
+.icons_menu {
+   display: flex;
+   flex-direction: row;
+   justify-content:space-around;
+   align-items: center;
+   margin-top: 8px;
+   height: 40px;
+   gap: 24px;
+}
+
 .icon_box{
    width: 40px;
    height: 40px;
    
-   }
+}
+
+
 
 .social_link{
    background-color: #4D5AE5;
@@ -492,6 +519,29 @@ li {
    pointer-events: auto;
 }
 
+.modal_overlay_menu{
+ background-color: #fff;
+ position:fixed;
+ top:0;
+ left:0;
+ width: 100%;
+ height: 100%;
+ z-index: 999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+ visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal_overlay_menu.is_open{
+   opacity: 1;
+      pointer-events: auto;
+}
+
 .modal {
    background-color: #F4F4FD;
    overflow-y: auto;
@@ -506,6 +556,31 @@ li {
    border-radius: 4px;
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal_menu{
+   background-color: #F4F4FD;
+      overflow-y: auto;
+      position: absolute;
+      padding: 72px 24px 24px 24px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 408px;
+      min-height: 584px;
+      background: #fcfcfc;
+      border-radius: 4px;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.menu_modal_list{
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 1.11111;
+   letter-spacing: 0.02em;
 }
 
 .form_modal{
@@ -626,6 +701,16 @@ fieldset{
    fill: #ffffff;
 }
 
+.menu_toggle{
+   display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+}
+
 .prg_modal{
    font-weight: 500;
    font-size: 16px;
@@ -731,6 +816,8 @@ fieldset{
    border: 1px solid #ccc;
    transition: all 0.3s ease;
 }
+
+
 
 :root {
    --accent-color: #404bbf;
