@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href=
     https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css>
 
@@ -21,7 +22,7 @@
           <a href="./index.html" class="logo_brand_nav">
             Web<span class="studio">Studio</span>
           </a>
-          <ul class="nav_list">
+          <ul class="nav_list vis">
             <li class="navigation_item">
               <a href="./index.html" class="link_nav nav_after">Studio</a>
             </li>
@@ -47,6 +48,11 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="menu_toggle" aria-label="Open menu">
+          <svg class="icon_menu" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -468,7 +474,7 @@
       </div>
     </footer>
 
-    <div class="modal_overlay is_open">
+    <div class="modal_overlay ">
       <div class="modal">
         <button type="button" class="btn_close_modal">
           <svg width="8" height="8" class="btn_close_img">
