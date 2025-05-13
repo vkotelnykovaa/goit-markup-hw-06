@@ -24,10 +24,6 @@ body {
    background-color: #F4F4FD;
 }
 
-section {
-   padding: 20px 0;
-}
-
 section h2 {
    margin-bottom: 20px;
 }
@@ -50,13 +46,13 @@ header {
 
 .text_head {
    font-weight: 700;
-   font-size: 56px;
-   line-height: 1.07143;
+   font-size: 36px;
+   line-height: 1.11111;
    letter-spacing: 0.02em;
    text-align: center;
    color: #fff;
-   max-width: 496px;
    margin: 0 auto 48px;
+   width: 100%;
 }
 
 a {
@@ -77,8 +73,6 @@ li {
    color: white;
    padding: 100px 0;
 }
-
-btn_close_modal
 
 .navigation_item:last-child {
    margin-right: 0;
@@ -143,6 +137,14 @@ btn_close_modal
    font-style: normal;
 }
 
+.list_marg_menu{
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+
+
 .nav_after::after {
    content: '';
    width: 100%;
@@ -163,8 +165,6 @@ btn_close_modal
    text-decoration: underline;
 }
 
-
-
 .nav_list .navigation_item:first-child .link_nav {
    position: relative;
    color: #404bbf;
@@ -172,7 +172,11 @@ btn_close_modal
 
 .list_menu {
    list-style: none;
+   gap: 20px;
+   padding-bottom: 168px;
 }
+
+
 
 .list_menu .navigation_item:first-child .link_nav {
    position: relative;
@@ -201,6 +205,7 @@ btn_close_modal
 
 .head_container{
    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+   padding: 16px 15px;
 }
 
 .teamsection_details {
@@ -216,6 +221,8 @@ btn_close_modal
    color: #2E2F42;
    margin-bottom: 8px;
 }
+
+
 
 .text {
    font-weight: 400;
@@ -239,6 +246,7 @@ btn_close_modal
    margin: 0 auto;
    min-width: 169px;
    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   gap: 10px;
 }
 
 .order_but:hover {
@@ -247,12 +255,13 @@ btn_close_modal
 
 .business_solution {
    max-width: 1440px;
-   background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+         url('../images/bg-mob.png');
    background-repeat: no-repeat;
    background-position: center;
    color: white;
    text-align: center;
-   padding: 188px 0;
+   padding: 72px;
    border-radius: 4px;
    align-items: center;
    justify-content: flex-start;
@@ -280,7 +289,6 @@ btn_close_modal
    color: #2e2f42;
 }
 
-
 .text_footer {
    font-size: 16px;
    letter-spacing: 0.02em;
@@ -297,8 +305,6 @@ btn_close_modal
    margin-bottom: 16px;
 }
 
-
-
 .studio_white {
    color: #f4f4fd;
 }
@@ -306,7 +312,6 @@ btn_close_modal
 .container {
    max-width: 1158px;
    margin: 0 auto;
-   padding: 0 15px;
    box-sizing: border-box;
 }
 
@@ -332,6 +337,13 @@ btn_close_modal
 .flexd_column {
    display: flex;
    flex-direction: column;
+}
+
+.flexd_column_pad {
+   padding-top: 72px;
+   padding-left: 32px;
+   padding-right: 32px;
+   padding-bottom: 72px;
 }
 
 
@@ -382,28 +394,25 @@ btn_close_modal
 }
 
 
+
 .features_container {
    display: flex;
    flex-direction: column;
-   gap: 5px;
    max-width: 1170px;
    min-width: 320px;
-   margin: 0 auto;
-   padding: 0;
    list-style: none;
 }
 
 .teamsection_list{
    display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
    flex-direction: column;
    gap: 5px;
    max-width: 1170px;
    min-width: 320px;
-   margin: 0 auto;
-   padding: 0;
    list-style: none;
 }
-
 
 .icon-soc{
    fill: #f4f4fd;
@@ -429,8 +438,16 @@ btn_close_modal
    justify-content:space-around;
    align-items: center;
    margin-top: 8px;
-   height: 40px;
    gap: 24px;
+   padding: 40px;
+}
+
+.icons_menu_menu{
+   display: flex;
+      flex-direction: row;
+      margin-top: 8px;
+      gap: 24px;
+
 }
 
 .icon_box{
@@ -451,8 +468,6 @@ btn_close_modal
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-
-
 
 .teamsection_icons .social_link:hover,
 .teamsection_icons .social_link:focus{
@@ -559,28 +574,32 @@ btn_close_modal
 }
 
 .modal_menu{
-   background-color: #F4F4FD;
+   background-color: #ffffff;
+      width: 100%;
+      height: 100%;
       overflow-y: auto;
-      position: absolute;
       padding: 72px 24px 24px 24px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 408px;
-      min-height: 584px;
       background: #fcfcfc;
       border-radius: 4px;
       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .menu_modal_list{
    font-weight: 700;
    font-size: 36px;
    line-height: 1.11111;
    letter-spacing: 0.02em;
+}
+
+icons_menu
+
+.menu_modal_list_contact{
+   font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: #4d5ae5;
 }
 
 .form_modal{
@@ -684,8 +703,6 @@ fieldset{
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
 .btn_close_modal:hover,
 .btn_close_modal:focus{
    background-color: #404bbf;
@@ -724,7 +741,6 @@ fieldset{
 
 .name_inp{
    margin-bottom: 8px;
-
 }
 
 .inp_cont{
@@ -748,8 +764,6 @@ fieldset{
    flex-direction: column;
    margin: 0 auto;
 }
-
-
 
 .inp_modal:focus{
    border-color: #4D5AE5;
@@ -817,8 +831,6 @@ fieldset{
    transition: all 0.3s ease;
 }
 
-
-
 :root {
    --accent-color: #404bbf;
    --icon-fill: #F4F4FD;
@@ -849,13 +861,12 @@ fieldset{
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
 .foot_column_row{
    display: flex;
    align-items: center;
    justify-content: flex-start;
    flex-direction: column;
+   padding: 92px 0;
 }
 
 .portfolio_list_container{
@@ -866,7 +877,6 @@ fieldset{
       padding: 0;
       list-style: none;
 }
-
 
 .portfolio_img {
    position: relative;
@@ -889,7 +899,33 @@ fieldset{
 
 }
 
+
 @media(min-width:768px) {
+
+   .addres_cont{
+      gap: 16px;
+   }
+
+   .contacts{
+      font-weight: 400;
+         font-size: 12px;
+         line-height: 1.16667;
+         letter-spacing: 0.04em;
+         color: #434455;
+   }
+
+   .business_solution {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/bg-tab.png');
+   }
+
+
+   .icons_feature {
+         border: 1px solid #8e8f99;
+         margin-bottom: 8px;
+         border-radius: 4px;
+         background-color: #f4f4fd;
+      }
 
    .feature_title{
       text-align: start;
@@ -911,29 +947,16 @@ fieldset{
       display: none;
    }
 
-
-
-   section {
-      padding: 120px 0;
+   .ai_center{
+      width: 584px;
    }
 
-   .icons_feature {
-      border: 1px solid #8e8f99;
-      margin-bottom: 8px;
-      border-radius: 4px;
-      width: 264px;
-      height: 112px;
+   .features_container{
       display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f4f4fd;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
    }
-
-      .features_container{
-         flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-      }
 
    .feature_item {
       flex-basis: calc((100% - 10px) / 2); 
@@ -942,11 +965,11 @@ fieldset{
    .teamsection_list{
       flex-direction: row;
          flex-wrap: wrap;
-         gap: 10px;
+         gap: 32px;
    }
 
    .teamsection_item{
-      width: calc((100% - 10px) / 2);
+      width: calc((100% - 32px) / 2);
    }
 
       .sub_col_row{
@@ -987,22 +1010,82 @@ fieldset{
 
 
 
+@media (max-width: 767px) and (min-resolution: 192dpi) {
+   .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+         url('../images/bg-mob@2x.png');
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) and (min-resolution: 192dpi) {
+   .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+         url('../images/bg-tab@2x.png');
+   }
+}
+
+@media (min-width: 1158px) and (min-resolution: 192dpi) {
+   .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+         url('../images/people-office-desc@2x.png');
+   }
+}
+
 @media(min-width:1158px) {
 
+   .addres_cont {
+         gap: 6px;
+      }
+
+   .contacts {
+      font-weight: 400;
+      font-size: 16px;
+       line-height: 1.5;
+       letter-spacing: 0.02em;
+      color: #434455;
+   }
+
+   .icons_feature {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .text_head{
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 1.07143;
+      letter-spacing: 0.02em;
+   }
+
+      .business_solution {
+         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/people-office-desc.png');
+      }
+
+   .business_solution{
+      padding: 188px 0;
+   }
+
    .features_container {
-         gap: 5px;
+         gap: 8px;
       }
    
    .feature_item {
-      flex-basis: calc((100% - 72px) / 4);
+      flex-basis: calc((100% - 8px) / 4);
    }
 
+      .ai_center{
+         width: 1128px;
+         padding: 0 97px;
+      }
+
    .teamsection_list {
-      gap: 5px;
+      gap: 10px;
    }
-      
+
    .teamsection_item {
-      flex-basis: calc((100% - 72px) / 4);  
+      flex-basis: calc((100% - 20px) / 4);  
    }
       
    .addres_cont{
