@@ -15,6 +15,8 @@ img {
    object-fit: cover;
 }
 
+
+
 body {
    font-family: "Roboto", sans-serif;
    color: #434455;  
@@ -53,6 +55,7 @@ header {
    color: #fff;
    margin: 0 auto 48px;
    width: 100%;
+   max-width: 216px;
 }
 
 a {
@@ -63,6 +66,8 @@ a {
 .link_nav{
    padding: 24px 0;
 }
+
+
 
 li {
    list-style: none;
@@ -141,9 +146,9 @@ li {
    display: flex;
    flex-direction: column;
    gap: 24px;
+
+   margin-bottom: 48px;
 }
-
-
 
 .nav_after::after {
    content: '';
@@ -194,6 +199,8 @@ li {
    margin-bottom: 72px;
 }
 
+
+
 .portfolio_title {
    font-weight: 700;
    font-size: 36px;
@@ -205,7 +212,6 @@ li {
 
 .head_container{
    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-   padding: 16px 15px;
 }
 
 .teamsection_details {
@@ -256,12 +262,13 @@ li {
 .business_solution {
    max-width: 1440px;
    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-         url('../images/bg-mob.png');
+         image-set(url('../images/Dark-mob.jpg') 1x,
+            url('../images\Dark-mob@2x.jpg') 2x);
    background-repeat: no-repeat;
    background-position: center;
    color: white;
    text-align: center;
-   padding: 72px;
+   padding: 72px 0;
    border-radius: 4px;
    align-items: center;
    justify-content: flex-start;
@@ -313,6 +320,7 @@ li {
    max-width: 1158px;
    margin: 0 auto;
    box-sizing: border-box;
+   padding: 0 16px;
 }
 
 .feature_title {
@@ -339,13 +347,10 @@ li {
    flex-direction: column;
 }
 
-.flexd_column_pad {
-   padding-top: 72px;
-   padding-left: 32px;
-   padding-right: 32px;
-   padding-bottom: 72px;
+.portfolio_list_container{
+   display: flex;
+   gap: 72px;
 }
-
 
 .portfolio_item {
    text-align:left;
@@ -389,28 +394,35 @@ li {
    overflow: hidden;
 }
 
+
+
 .icons_feature{
    display: none;
 }
 
-
-
 .features_container {
    display: flex;
    flex-direction: column;
-   max-width: 1170px;
-   min-width: 320px;
+   gap: 72px;
    list-style: none;
+}
+
+.portfolio_section{
+   padding-top: 96px;
+   padding-bottom: 96px;
+}
+
+.team_sec{
+   padding-top: 96px;
+   padding-bottom: 96px;
 }
 
 .teamsection_list{
    display: flex;
-   align-items: flex-start;
+   align-items: center;
    justify-content: flex-start;
    flex-direction: column;
-   gap: 5px;
-   max-width: 1170px;
-   min-width: 320px;
+   gap: 72px;
    list-style: none;
 }
 
@@ -439,8 +451,9 @@ li {
    align-items: center;
    margin-top: 8px;
    gap: 24px;
-   padding: 40px;
 }
+
+
 
 .icons_menu_menu{
    display: flex;
@@ -455,8 +468,6 @@ li {
    height: 40px;
    
 }
-
-
 
 .social_link{
    background-color: #4D5AE5;
@@ -534,6 +545,7 @@ li {
    pointer-events: auto;
 }
 
+
 .modal_overlay_menu{
  background-color: #fff;
  position:fixed;
@@ -565,8 +577,8 @@ li {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 408px;
-   min-height: 584px;
+   width: 288px;
+   min-height: 623px;
    background: #fcfcfc;
    border-radius: 4px;
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -591,8 +603,6 @@ li {
    line-height: 1.11111;
    letter-spacing: 0.02em;
 }
-
-icons_menu
 
 .menu_modal_list_contact{
    font-weight: 500;
@@ -759,10 +769,13 @@ fieldset{
    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
 .foot_column_row_div{
    display: flex;
    flex-direction: column;
    margin: 0 auto;
+   gap: 72px;
 }
 
 .inp_modal:focus{
@@ -861,12 +874,19 @@ fieldset{
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mod_btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
 .foot_column_row{
    display: flex;
    align-items: center;
    justify-content: flex-start;
    flex-direction: column;
-   padding: 92px 0;
+   gap: 72px;
 }
 
 .portfolio_list_container{
@@ -877,6 +897,13 @@ fieldset{
       padding: 0;
       list-style: none;
 }
+
+.features_cont{
+   padding-top: 96px;
+   padding-bottom: 96px;
+}
+
+
 
 .portfolio_img {
    position: relative;
@@ -899,8 +926,35 @@ fieldset{
 
 }
 
+.feature_cont{
+   padding-top: 96px;
+   padding-bottom: 96px;
+}
+
 
 @media(min-width:768px) {
+
+   .mod_btn{
+      display: block;
+   }
+
+   .comtainer{
+      max-width: 768px;
+   }
+
+   .head_container{
+      padding: 0;
+   }
+
+   .modal{
+      width: 408px;
+      min-height: 584px;
+   }
+
+   .text_head{
+      max-width: 496px;
+      font-size: 56px;
+   }
 
    .addres_cont{
       gap: 16px;
@@ -917,6 +971,8 @@ fieldset{
    .business_solution {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url('../images/bg-tab.png');
+      padding-top: 112px;
+      padding-bottom: 112px;
    }
 
 
@@ -955,11 +1011,11 @@ fieldset{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 72px 24px;
    }
 
    .feature_item {
-      flex-basis: calc((100% - 10px) / 2); 
+      flex-basis: calc((100% - 24px) / 2); 
    }
 
    .teamsection_list{
@@ -979,11 +1035,10 @@ fieldset{
 
       .foot_column_row_div{
          flex-direction: row;
+         gap: 24px;
       }
 
       .logo_foot {
-         margin-right: 20px;
-         margin-bottom: 100px;
          align-items:normal;
       }
 
@@ -1013,14 +1068,16 @@ fieldset{
 @media (max-width: 767px) and (min-resolution: 192dpi) {
    .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-         url('../images/bg-mob@2x.png');
+            image-set(url('../images\Dark-tab.jpg') 1x,
+               url('../images\Dark-tab@2x.jpg') 2x);
    }
 }
 
 @media (min-width: 768px) and (max-width: 1157px) and (min-resolution: 192dpi) {
    .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-         url('../images/bg-tab@2x.png');
+      image-set(url('../images\Dark-tab.jpg') 1x,
+            url('../images\Dark-tab@2x.jpg') 2x);
    }
 }
 
@@ -1032,6 +1089,10 @@ fieldset{
 }
 
 @media(min-width:1158px) {
+
+   .comtainer {
+         max-width: 1158px;
+      }
 
    .addres_cont {
          gap: 6px;
@@ -1068,24 +1129,21 @@ fieldset{
    }
 
    .features_container {
-         gap: 8px;
+      flex-wrap: nowrap;
+         gap: 24px;
       }
    
    .feature_item {
-      flex-basis: calc((100% - 8px) / 4);
+      flex-basis: calc((100% - 24px) / 4);
    }
 
-      .ai_center{
-         width: 1128px;
-         padding: 0 97px;
-      }
-
    .teamsection_list {
-      gap: 10px;
+      gap: 24px;
+      flex-wrap: nowrap;
    }
 
    .teamsection_item {
-      flex-basis: calc((100% - 20px) / 4);  
+      flex-basis: calc((100% - 24px) / 4);  
    }
       
    .addres_cont{
@@ -1095,7 +1153,12 @@ fieldset{
 
    .foot_column_row {
       flex-direction: row;
+      gap: unset;
    }
+
+.foot_column_row_div{
+   gap: unset;
+}
 
    .logo_foot {
       margin-bottom: 0px;
