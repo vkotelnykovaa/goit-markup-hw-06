@@ -1147,11 +1147,6 @@ fieldset{
       letter-spacing: 0.02em;
    }
 
-      .business_solution {
-         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url('../images/people-office-desc.png');
-      }
-
    .business_solution{
       padding: 188px 0;
    }
