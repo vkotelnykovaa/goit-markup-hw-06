@@ -1083,28 +1083,19 @@ fieldset{
             }
 }
 
-
-
-@media (max-width: 767px) and (min-resolution: 192dpi) {
-   .hero {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            image-set(url('../images\Dark-tab.jpg') 1x,
-               url('../images\Dark-tab@2x.jpg') 2x);
-   }
-}
-
 @media (min-width: 768px) and (max-width: 1157px) and (min-resolution: 192dpi) {
-   .hero {
+   .business_solution {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      image-set(url('../images\Dark-tab.jpg') 1x,
-            url('../images\Dark-tab@2x.jpg') 2x);
+      image-set(url('../images/Dark-tab.jpg') 1x,
+            url('../images/Dark-tab@2x.jpg') 2x);
    }
 }
 
 @media (min-width: 1158px) and (min-resolution: 192dpi) {
-   .hero {
+   .business_solution {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-         url('../images/people-office-desc@2x.png');
+            image-set(url('../images/people-office-desc.jpg') 1x,
+               url('../images/people-office@2x.jpg') 2x);
    }
 }
 
